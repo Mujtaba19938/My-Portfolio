@@ -228,8 +228,8 @@ section#header {
 }
 
 section:not(:first-child) {
-	padding-top: 4.5em;
-	padding-bottom: 4.5em;
+	padding-top: 2.5em;
+	padding-bottom: 1.5em;
 }
 section {
 	padding: 0 3em;
@@ -371,38 +371,11 @@ section#socials .card svg {
 		height: 130px;
 	}
 }
-button {
-  cursor: pointer;
-  font-weight: 700;
-  font-family: Helvetica,"sans-serif";
-  transition: all .2s;
-  background: rgb(193, 163, 98);
-  border: 1px solid transparent;
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  padding: 6px 12px;
-  font-size: 14px; 
-  border-radius: 100px; 
-  width: auto; 
-}
 
-button > svg {
-  width: 34px;
-  margin-left: 10px;
-  transition: transform .3s ease-in-out;
-}
-
-button:hover svg {
-  transform: translateX(5px);
-}
-
-button:active {
-  transform: scale(0.95);
-}
 /* Socials BUtton */ 
 .button-container {
     display: flex;
+    flex-direction: row;
     justify-content: center; /* Center icons horizontally */
     gap: 20px; /* Adjust this value for equal spacing between icons */
 }
@@ -479,7 +452,7 @@ button:active {
     position: relative;
     overflow: hidden;
     transition-duration: 0.3s;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    box-shadow: 2px 2px 10px #00000033;
     background-color: #0163E0;
     padding-left: 10px;
     margin-right: 10px;
@@ -643,4 +616,180 @@ button:active {
     width: auto;
     padding-right: 10px;
     transition-duration: 0.3s;
+}
+
+/* From Uiverse.io by david-mohseni */ 
+/* From Uiverse.io by vinodjangid07 */ 
+/* From Uiverse.io by mRcOol7 */ 
+
+.light-button {
+    display: flex;
+    flex-direction: row; /* Aligns buttons horizontally */
+    justify-content: center; /* Centers the buttons */
+    align-items: center; /* Aligns them properly */
+    gap: 20px; /* Adds space between buttons */
+    flex-wrap: nowrap; /* Prevents wrapping to a new line */
+    width: 100%; /* Ensures full width for proper alignment */
+}
+
+.light-button button.bt {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .light-button button.bt .light-holder .dot {
+    position: absolute;
+    top: 5px; /* Adjust this value to center it */
+    left: 50%; /* Moves the dot to the center */
+    transform: translateX(-50%); /* Ensures perfect centering */
+    width: 10px;
+    height: 10px;
+    background-color: #0a0a0a;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+  
+  .light-button button.bt .button-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    margin: 0 10px;
+    height: 100px;
+    width: 100px;
+    background-color: #0a0a0a;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: 700;
+    transition: 200ms;
+    outline: #0f0f0f 2px solid;
+    outline-offset: 2px;
+    position: relative; /* Ensure controlled positioning */
+}
+.light-button button.bt .button-holder p {
+    position: absolute;
+    margin-top: 15px; /* Adjust this value as needed */
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #00000033; /* Ensure text is visible */
+}
+.light-button button.bt:hover .button-holder p {
+    color: rgba(0, 119, 181, 1); /* LinkedIn blue */
+    transition: 200ms;
+}
+  .light-button button.bt .button-holder svg {
+    height: 50px;
+    fill: #0f0f0f;
+    transition: 50ms;
+  }
+  
+  .light-button button.bt .light-holder {
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 700ms;
+  }
+  
+  .light-button button.bt .light-holder .dot {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #0a0a0a;
+    border-radius: 10px;
+    z-index: 2;
+  }
+  
+  .light-button button.bt .light-holder .light {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+    background: transparent;
+  }
+  
+ /* LinkedIn Button */
+.light-button button.bt.linkedin:hover .button-holder svg {
+    fill: rgba(0, 119, 181, 1); /* LinkedIn blue */
+}
+
+.light-button button.bt.linkedin:hover .button-holder {
+    color: rgba(0, 119, 181, 1);
+    outline: rgba(0, 119, 181, 1) 2px solid;
+}
+
+.light-button button.bt.linkedin:hover .light-holder .light {
+    background: linear-gradient(180deg, rgba(0, 119, 181, 1) 0%, rgba(255, 255, 255, 0) 75%);
+}
+
+/* Facebook Button */
+.light-button button.bt.facebook:hover .button-holder svg {
+    fill: rgba(66, 103, 178, 1); /* Facebook blue */
+}
+
+.light-button button.bt.facebook:hover .button-holder {
+    color: rgba(66, 103, 178, 1);
+    outline: #4267b2 2px solid;
+}
+
+.light-button button.bt.facebook:hover .button-holder p {
+    color: rgb(66, 103, 178) !important; /* Gmail blue */
+    transition: 300ms;
+}
+
+.light-button button.bt.facebook:hover .light-holder .light {
+    background: linear-gradient(180deg, rgba(66, 103, 178, 1) 0%, rgba(255, 255, 255, 0) 75%);
+}
+
+/* WhatsApp Button */
+.light-button button.bt.whatsapp:hover .button-holder svg {
+    fill: rgba(37, 211, 102, 1); /* WhatsApp green */
+}
+
+.light-button button.bt.whatsapp:hover .button-holder {
+    color: rgba(37, 211, 102, 1);
+    outline: #25d366 2px solid;
+}
+
+.light-button button.bt.whatsapp:hover .button-holder p {
+    color: rgb(37, 211, 102) !important; /* Gmail green */
+    transition: 300ms;
+}
+
+.light-button button.bt.whatsapp:hover .light-holder .light {
+    background: linear-gradient(180deg, rgba(37, 211, 102, 1) 0%, rgba(255, 255, 255, 0) 75%);
+}
+
+/* Gmail Button */
+.light-button button.bt.gmail:hover .button-holder svg {
+    fill: rgba(234, 67, 53, 1); /* Gmail red */
+}
+
+.light-button button.bt.gmail:hover .button-holder {
+    color: rgba(234, 67, 53, 1);
+    outline: rgba(234, 67, 53, 1) 2px solid;
+}
+
+.light-button button.bt.gmail:hover .button-holder p {
+    color: rgba(234, 67, 53, 1) !important; /* Gmail red */
+    transition: 300ms;
+}
+
+.light-button button.bt.gmail:hover .light-holder .light {
+    background: linear-gradient(180deg, rgba(234, 67, 53, 1) 0%, rgba(255, 255, 255, 0) 75%);
 }
