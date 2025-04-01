@@ -146,7 +146,20 @@ body {
 .nav-links .dropdown {
     position: relative;
 }
+/* Hide dropdown by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #111; /* match your dark theme */
+  padding: 10px;
+  list-style: none;
+  z-index: 1000;
+}
 
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
 .nav-links .dropdown-menu {
     position: absolute;
     top: 110%;
