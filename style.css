@@ -442,41 +442,48 @@ section#socials .card svg {
 .socials-section {
   padding: 60px 20px;
   text-align: center;
-  background-color: transparent; /* Remove background completely */
+  background-color: transparent; /* Transparent background */
 }
 
 .socials-title {
   font-size: 3rem;
   font-weight: 700;
-  color: #8e9a9d; /* Updated to the requested color */
+  color: #8e9a9d;
   margin-bottom: 40px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  /* Removing any potential border/decoration */
+  border: none;
+  text-decoration: none;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 40px; /* Increased spacing between icons */
-  max-width: 800px;
+  gap: 50px; /* Increased spacing between larger icons */
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .social-icons a {
-  background-color: #1e1f21; /* Keeping the original dark background for icons */
-  padding: 20px;
-  border-radius: 12px;
+  background-color: #1e1f21;
+  padding: 22px; /* Increased padding */
+  border-radius: 14px; /* Slightly larger radius */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 55px; /* Fixed width */
-  height: 55px; /* Fixed height */
+  width: 70px; /* Increased width */
+  height: 70px; /* Increased height */
   transition: transform 0.3s, background-color 0.3s;
+  /* Ensuring no borders or underlines */
+  border: none;
+  text-decoration: none;
+  box-shadow: none;
 }
 
 .social-icons i {
-  color: #8e9a9d; /* Updated to the requested color */
-  font-size: 1.6rem;
+  color: #8e9a9d;
+  font-size: 2rem; /* Larger icon size */
   transition: color 0.3s;
 }
 
@@ -502,27 +509,53 @@ section#socials .card svg {
 }
 
 .social-icons a:hover i {
-  color: #ffffff; /* Icon turns white on hover for better contrast */
+  color: #ffffff; /* Icon turns white on hover */
+}
+
+/* Explicitly remove any borders/lines from all elements */
+.socials-section *,
+.socials-section *::before,
+.socials-section *::after {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 /* Media query for mobile responsiveness */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .social-icons {
-    gap: 20px;
+    gap: 30px;
   }
   
   .social-icons a {
-    padding: 15px;
-    width: 45px;
-    height: 45px;
+    padding: 18px;
+    width: 60px;
+    height: 60px;
   }
   
   .social-icons i {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
   }
   
   .socials-title {
     font-size: 2.5rem;
     margin-bottom: 30px;
+  }
+}
+
+/* Smaller screens */
+@media (max-width: 480px) {
+  .social-icons {
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .social-icons i {
+    font-size: 1.5rem;
   }
 }
