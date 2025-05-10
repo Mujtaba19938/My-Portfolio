@@ -440,68 +440,69 @@ section#socials .card svg {
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 .socials-section {
-  background-color: #2c2f33;
-  padding: 40px 20px;
+  padding: 60px 20px;
   text-align: center;
+  background-color: transparent; /* Remove background completely */
 }
 
 .socials-title {
   font-size: 3rem;
-  font-weight: bold;
-  color: #444;
-  margin-bottom: 20px;
+  font-weight: 700;
+  color: #8e9a9d; /* Updated to the requested color */
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 40px; /* Increased from 25px for more spacing */
+  gap: 40px; /* Increased spacing between icons */
   max-width: 800px;
   margin: 0 auto;
 }
 
 .social-icons a {
-  background-color: #252729; /* Slightly lighter than the section background */
-  padding: 20px; /* Increased padding for larger hit area */
-  border-radius: 16px; /* Slightly increased for modern look */
+  background-color: #1e1f21; /* Keeping the original dark background for icons */
+  padding: 20px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px; /* Fixed width */
-  height: 60px; /* Fixed height */
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  width: 55px; /* Fixed width */
+  height: 55px; /* Fixed height */
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .social-icons i {
-  color: #ffffff;
-  font-size: 1.8rem; /* Slightly larger icons */
+  color: #8e9a9d; /* Updated to the requested color */
+  font-size: 1.6rem;
   transition: color 0.3s;
 }
 
 /* Individual hover effects for each social platform */
-.social-icons a:nth-child(1):hover {
+.social-icons a:nth-of-type(1):hover {
   background-color: #0A66C2; /* LinkedIn blue */
-  transform: translateY(-5px);
+  transform: scale(1.1);
 }
 
-.social-icons a:nth-child(2):hover {
+.social-icons a:nth-of-type(2):hover {
   background-color: #1877F2; /* Facebook blue */
-  transform: translateY(-5px);
+  transform: scale(1.1);
 }
 
-.social-icons a:nth-child(3):hover {
+.social-icons a:nth-of-type(3):hover {
   background-color: #25D366; /* WhatsApp green */
-  transform: translateY(-5px);
+  transform: scale(1.1);
 }
 
-.social-icons a:nth-child(4):hover {
+.social-icons a:nth-of-type(4):hover {
   background-color: #EA4335; /* Email/Gmail red */
-  transform: translateY(-5px);
+  transform: scale(1.1);
 }
 
 .social-icons a:hover i {
-  color: #ffffff; /* Keep icon white on hover for better contrast */
+  color: #ffffff; /* Icon turns white on hover for better contrast */
 }
 
 /* Media query for mobile responsiveness */
@@ -512,12 +513,12 @@ section#socials .card svg {
   
   .social-icons a {
     padding: 15px;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
   
   .social-icons i {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   
   .socials-title {
