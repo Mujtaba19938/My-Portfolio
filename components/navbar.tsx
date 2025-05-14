@@ -5,7 +5,7 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Download } from "lucide-react"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -87,7 +87,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -100,10 +100,35 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
+
+          {/* Resume Download Button */}
+          <a
+            href="/resume.pdf"
+            download="Mujtaba_Khanani_Resume.pdf"
+            className="relative overflow-hidden bg-[#c9a86a] text-[#1a1a1a] font-semibold py-2 px-4 rounded-md flex items-center group hover:shadow-lg transition-all duration-300"
+            onClick={() => {
+              // Analytics tracking could go here
+              console.log("Resume downloaded")
+            }}
+          >
+            <span className="mr-2">Resume</span>
+            <Download size={16} className="animate-bounce" />
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#1a1a1a] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+          </a>
         </div>
 
         {/* Mobile Navigation Toggle */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center">
+          {/* Mobile Resume Button */}
+          <a
+            href="/resume.pdf"
+            download="Mujtaba_Khanani_Resume.pdf"
+            className="mr-4 bg-[#c9a86a] text-[#1a1a1a] font-semibold py-1.5 px-3 rounded-md flex items-center"
+            aria-label="Download Resume"
+          >
+            <Download size={16} />
+          </a>
+
           <button onClick={toggleMenu} className="focus:outline-none">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -132,6 +157,16 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
+
+            {/* Full Resume Button in Mobile Menu */}
+            <a
+              href="/resume.pdf"
+              download="Mujtaba_Khanani_Resume.pdf"
+              className="bg-[#c9a86a] text-[#1a1a1a] font-semibold py-2 px-4 rounded-md flex items-center justify-center"
+            >
+              <span className="mr-2">Download Resume</span>
+              <Download size={16} />
+            </a>
           </div>
         </div>
       )}
