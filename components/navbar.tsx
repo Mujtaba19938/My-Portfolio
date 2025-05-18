@@ -103,12 +103,13 @@ export default function Navbar() {
 
           {/* Resume Download Button */}
           <a
-            href="/resume.pdf"
-            download="Mujtaba_Khanani_Resume.pdf"
+            href="/resume.html"
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative overflow-hidden bg-[#c9a86a] text-[#1a1a1a] font-semibold py-2 px-4 rounded-md flex items-center group hover:shadow-lg transition-all duration-300"
             onClick={() => {
               // Analytics tracking could go here
-              console.log("Resume downloaded")
+              console.log("Resume viewed")
             }}
           >
             <span className="mr-2">Resume</span>
@@ -121,10 +122,11 @@ export default function Navbar() {
         <div className="md:hidden flex items-center">
           {/* Mobile Resume Button */}
           <a
-            href="/resume.pdf"
-            download="Mujtaba_Khanani_Resume.pdf"
+            href="/resume.html"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mr-4 bg-[#c9a86a] text-[#1a1a1a] font-semibold py-1.5 px-3 rounded-md flex items-center"
-            aria-label="Download Resume"
+            aria-label="View Resume"
           >
             <Download size={16} />
           </a>
@@ -160,11 +162,12 @@ export default function Navbar() {
 
             {/* Full Resume Button in Mobile Menu */}
             <a
-              href="/resume.pdf"
-              download="Mujtaba_Khanani_Resume.pdf"
+              href="/resume.html"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#c9a86a] text-[#1a1a1a] font-semibold py-2 px-4 rounded-md flex items-center justify-center"
             >
-              <span className="mr-2">Download Resume</span>
+              <span className="mr-2">View Resume</span>
               <Download size={16} />
             </a>
           </div>
